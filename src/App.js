@@ -1,7 +1,8 @@
 import Header from './components/layout/components/Header/indexs';
-import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
-import {publicRoutes} from '~/routes'
-import {DefaultLayout} from '~/components/layout'
+import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
+import {publicRoutes} from './routes/index.js';
+import DefaultLayout from './components/layout/components/index.js';
+import {Fragment} from 'react'
 
 function App() {
   return (
@@ -9,13 +10,20 @@ function App() {
       <div className="App">
         <Routes>
           {publicRoutes.map((route,index )=>{
-            const layout = route.layout || DefaultLayout;
             const Page = route.component
-            return <Route key={index} path={route.path} element={<Page/>}/>
+            let Layout = DefaultLayout
+            if(route.layout) {
+              Layout = route.layout
+            }else if(route.layout===null){
+              Layout = Fragment
+            }
+
+            return <Route key={index} path={route.path} element={
+            <Layout>
+              <Page/>
+            </Layout>}/>
           })}
-          
         </Routes>
-      <Header/>
     </div>
     </Router>
   );

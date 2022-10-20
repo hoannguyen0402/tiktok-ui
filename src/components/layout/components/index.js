@@ -1,5 +1,5 @@
 import Header from "./Header/indexs";
-import Sidebar from "./sidebar";
+import Sidebar from "./sidebar/index.js";
 
 function DefaultLayout ({children}) {
     return ( 

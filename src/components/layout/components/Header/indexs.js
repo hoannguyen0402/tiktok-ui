@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 function Header(){
     return(
         <header className={cx('wrapper')}>
-            <div className={cx('inner')}>abc
+            <div className={cx('inner')}>
                 <div className={cx('logo')}>
                     <svg height="42" width="118" alt="TikTok">
                         <g clipPath="url(#clip0)">
