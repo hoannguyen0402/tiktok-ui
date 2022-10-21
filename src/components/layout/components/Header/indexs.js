@@ -1,8 +1,9 @@
 import classNames from 'classnames/bind'
 import styles from './Header.module.scss'
 
-const cx = classNames.bind(styles);
 
+
+const cx = classNames.bind(styles);
 
 function Header(){
     return(
@@ -29,6 +30,12 @@ function Header(){
                             <path d="M91.5803 28.8866C89.4021 28.8866 87.6391 27.1221 87.6391 24.942C87.6391 22.762 89.4021 20.9975 91.5803 20.9975C93.7585 20.9975 95.5215 22.762 95.5215 24.942C95.5215 27.1221 93.7522 28.8866 91.5803 28.8866ZM91.5803 16.8292C87.1026 16.8292 83.4744 20.4605 83.4744 24.942C83.4744 29.4236 87.1026 33.0548 91.5803 33.0548C96.0581 33.0548 99.6863 29.4236 99.6863 24.942C99.6863 20.4605 96.0581 16.8292 91.5803 16.8292Z" fill="black"></path>
                         </g><defs><clipPath id="clip0"><rect width="118" height="42" fill="white"></rect></clipPath></defs>
                     </svg>
+                </div>
+                <div className={cx('search')}>
+                    <input placeholder = "Search accounts and videos" spellCheck={false}/>
+                    <button></button>
+                    {/*loading*/}
+                    <button></button>
                 </div>
             </div>
         </header>
