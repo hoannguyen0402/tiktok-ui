@@ -1,5 +1,6 @@
 import Header from "./Header/indexs";
 import Sidebar from "./sidebar/index.js";
+import "./index.scss"
 
 function DefaultLayout ({children}) {
     return ( 
